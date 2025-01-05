@@ -1,62 +1,31 @@
-# Exam Preparation OOP
+# Exam Preparation for OOP
 
-This repository is dedicated to helping you prepare for your Object-Oriented Programming (OOP) exams. It contains various resources, examples, and exercises to enhance your understanding of OOP concepts.
+This repository is dedicated to preparing for Object-Oriented Programming (OOP) exams, based on the content from Sir Perante's YouTube channel.
 
 ## Table of Contents
-
 - [Introduction](#introduction)
-- [OOP Concepts](#oop-concepts)
-- [Examples](#examples)
-- [Exercises](#exercises)
 - [Resources](#resources)
+- [Topics Covered](#topics-covered)
+- [How to Use This Repository](#how-to-use-this-repository)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## Introduction
-
-This repository aims to provide a comprehensive guide to OOP, covering fundamental concepts, practical examples, and exercises to test your knowledge.
-
-## OOP Concepts
-
-- Classes and Objects
-- Inheritance
-- Polymorphism
-- Encapsulation
-- Abstraction
-
-## Examples
-
-The `examples` directory contains various code snippets and programs demonstrating OOP concepts in different programming languages.
-
-## Exercises
-
-The `exercises` directory includes practice problems and solutions to help you reinforce your understanding of OOP principles.
+This repository contains notes, code examples, and practice problems to help you prepare for your OOP exams. The material is based on the lectures and tutorials from Sir Perante's YouTube channel.
 
 ## Resources
+- [Sir Perante's YouTube Channel](https://www.youtube.com/channel/UCXXXXXX)
 
-- [Books](#books)
-- [Online Courses](#online-courses)
-- [Documentation](#documentation)
-
-### Books
-
-- "Object-Oriented Programming in C++" by Robert Lafore
-- "Java: The Complete Reference" by Herbert Schildt
-
-### Online Courses
-
-- [Coursera: Object-Oriented Programming](https://www.coursera.org/courses?query=object%20oriented%20programming)
-- [Udemy: Master Object-Oriented Design in Java](https://www.udemy.com/course/master-object-oriented-design-in-java/)
-
-### Documentation
-
-- [Python OOP Documentation](https://docs.python.org/3/tutorial/classes.html)
-- [Java OOP Documentation](https://docs.oracle.com/javase/tutorial/java/concepts/)
+## How to Use This Repository
+1. Clone the repository to your local machine.
+    ```bash
+    git clone https://github.com/YourUsername/Exam_Preparation_OOP.git
+    ```
+2. Navigate through the folders to find notes, code examples, and practice problems.
+3. Follow along with Sir Perante's videos for a comprehensive understanding.
 
 ## Contributing
-
-Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) before submitting a pull request.
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
 ## License
-
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
