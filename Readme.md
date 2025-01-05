@@ -1,3 +1,8 @@
+## Disclaimer
+Base Rani sa Ako Nahibaw An 
+
+
+
 # Exam Preparation for OOP
 
 ![OOP Exam Preparation](./Image/Screenshot%202025-01-05%20134024.png)
