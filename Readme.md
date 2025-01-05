@@ -12,7 +12,6 @@ This repository is dedicated to preparing for Object-Oriented Programming (OOP) 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Resources](#resources)
-- [Topics Covered](#topics-covered)
 - [How to Use This Repository](#how-to-use-this-repository)
 - [Contributing](#contributing)
 - [License](#license)
