@@ -1,6 +1,6 @@
 # Exam Preparation for OOP
 
-![OOP Exam Preparation](C:\Users\User\Documents\GitHub\Exam_Preparation_OOP\Image\Screenshot 2025-01-05 134024.png)
+![OOP Exam Preparation](./Image/Screenshot%202025-01-05%20134024.png)
 
 This repository is dedicated to preparing for Object-Oriented Programming (OOP) exams, based on the content from Sir Perante's YouTube channel.
 
