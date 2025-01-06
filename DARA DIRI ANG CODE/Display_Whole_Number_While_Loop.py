@@ -12,7 +12,7 @@ def display_whole_number():
             while x <= input_value:
                 result = str(result) + str(x) + " "
                 x += 1
-                messagebox.showinfo("Result", f"{result}")
+            messagebox.showinfo("Result", f"{result}")
         else:
             messagebox.showerror("Error", "Please enter a valid Input")
     except ValueError:
