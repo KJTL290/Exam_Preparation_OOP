@@ -13,8 +13,8 @@ def display_input():
         while x <= num:
             if x % 2 == 0:
                 result = str(result) + str(x) + "\n"
-            x += 1
-            messagebox.showinfo("Result", f"{result}")
+                x += 1
+        messagebox.showinfo("Result", f"{result}")
             
     except ValueError:
         messagebox.showerror("Error", "Please enter a valid whole number")
