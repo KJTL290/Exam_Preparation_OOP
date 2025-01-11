@@ -1,49 +1,50 @@
-import tkinter as tk
+from tkinter import *
 from tkinter import messagebox
+def submit():
+	try:
+		global items
+		item = e1.get().strip()
+		l.insert(END, item)
+		items.append(item)
+	except Exception:
+		messagebox.showerror("Error", "Error")
 
-grocery_list = []
+def delete():
+	try:
+		global items
+		item = e2.get().strip()
+		if item in items:
+			items.remove(item)
+			index = l.get(0, END).index(item)
+			l.delete(index)
+		else:
+			messagebox.showerror("Error", " Item cannot be found")
+	except Exception:
+		messagebox.showerror("Error", "Error")
 
-def create_window():
-    window = tk.Tk()
-    window.title("Grocery List Manager")
-    return window
+def search():
+	try:
+		item = e3.get().strip()
+		if item in items:
+			messagebox.showinfo("Search", "Item Found")
+		else:
+			messagebox.showerror("Error", " Item cannot be found")
+	except Exception:
+		messagebox.showerror("Error", "Error")
+	
+	
+items = []
+r = Tk()
+l = Listbox(r)
+l.pack()
+e1 = Entry(r)
+e1.pack()
+Button(r, text="Submit", command=submit).pack()
+e2 = Entry(r)
+e2.pack()
+Button(r, text="Delete", command=delete).pack()
+e3 = Entry(r)
+e3.pack()
+Button(r, text="Search", command=search).pack()
+r.mainloop()
 
-def add_item(entry, listbox):
-    item = entry.get()
-    if item:
-        grocery_list.append(item)
-        update_listbox(listbox)
-        entry.delete(0, tk.END)
-    else:
-        messagebox.showwarning("Warning", "Please enter an item")
-
-def delete_item(listbox):
-    selection = listbox.curselection()
-    if selection:
-        index = selection[0]
-        grocery_list.pop(index)
-        update_listbox(listbox)
-
-def update_listbox(listbox):
-    listbox.delete(0, tk.END)
-    for item in grocery_list:
-        listbox.insert(tk.END, item)
-
-# Create main window and widgets
-window = create_window()
-
-entry = tk.Entry(window)
-entry.pack(pady=10)
-
-listbox = tk.Listbox(window)
-listbox.pack(pady=10)
-
-add_button = tk.Button(window, text="Add Item", 
-                      command=lambda: add_item(entry, listbox))
-add_button.pack(pady=5)
-
-delete_button = tk.Button(window, text="Delete Item", 
-                         command=lambda: delete_item(listbox))
-delete_button.pack(pady=5)
-
-window.mainloop()
