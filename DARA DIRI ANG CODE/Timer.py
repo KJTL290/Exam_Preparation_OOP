@@ -1,31 +1,23 @@
 import tkinter as tk
-import time as t
 from tkinter import messagebox
 
-def count_down():
-    if not ent_input.get():
-        messagebox.showwarning("Empty Input", "Input field is blank. Please enter an input.")
-              
-    try: 
-        time = int(ent_input.get())
-
-        if time <= 0:
-            raise ValueError
-
-        while time != 0: # or [while time]
-            t.sleep(1)
-            time -= 1
-        
-        messagebox.showinfo("Finished", "Time's Up!")
-    except:
-        messagebox.showerror("Invalid Input", "Please enter a valid integer (positive whole numbers only).")
+def start_countdown():
+    try:
+        seconds = max(0, int(entry.get()))
+        while seconds >= 0:
+            label.config(text=f"Time: {seconds}s")
+            root.update()
+            root.after(1000)
+            seconds -= 1
+            seconds == 10 and messagebox.showwarning("Warning", "10s left!")
+        messagebox.showinfo("Done", "Time's up!")
+    except ValueError:
+        messagebox.showerror("Error", "Enter valid number!")
 
 root = tk.Tk()
-
-ent_input = tk.Entry(root)
-btn_start = tk.Button(root, text="Start", command=count_down)
-
-ent_input.pack()
-btn_start.pack()
-
+root.title("Timer")
+label = tk.Label(root, font=("Arial", 12))
+entry = tk.Entry(root)
+tk.Button(root, text="Start", command=start_countdown).pack()
+[w.pack() for w in (label, entry)]
 root.mainloop()
