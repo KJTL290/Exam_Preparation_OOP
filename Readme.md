@@ -7,7 +7,7 @@ Base Rani sa Ako Nahibaw An
 
 ![OOP Exam Preparation](./Image/Image.png)
 
-This repository is dedicated to preparing for Object-Oriented Programming (OOP) exams, based on the content from Sir Perante's YouTube channel.
+This repository contains study materials and practice exercises for Object-Oriented Programming (OOP), based on Sir Perante's YouTube channel lectures and resources from Section "A" Google Drive materials.
 
 ## Table of Contents
 - [Introduction](#introduction)
