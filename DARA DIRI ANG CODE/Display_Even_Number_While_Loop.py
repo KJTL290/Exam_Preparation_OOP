@@ -1,35 +1,40 @@
 import tkinter as tk
 from tkinter import messagebox
 
-root = tk.Tk()
-root.title("Display Even Number")
-
-def display_input():
+def display_numbers():
     try:
         num = int(entry.get())
-        x = 1
-        result = ""
-        while x <= num:
-            if x % 2 == 0:
-                result = str(result) + str(x) + "\n"
-            x += 1
-        messagebox.showinfo("Result", f"{result}")
-    except ValueError:
-        messagebox.showerror("Error", "Please enter a valid whole number")
+        choice = int(choice_var.get())
+        if num < 1 or num > 20:
+            raise ValueError("Number out of range")
+        if choice not in [0, 1]:
+            raise ValueError("Invalid choice")
+        
+        result = []
+        if choice == 0:
+            result = [i for i in range(1, num + 1) if i % 2 == 0]
+        else:
+            result = [i for i in range(1, num + 1) if i % 2 != 0]
+        
+        result_label.config(text="Output: " + " ".join(map(str, result)))
+    except ValueError as e:
+        messagebox.showerror("Error", str(e))
 
-def clear():
-    entry.delete(0, tk.END)
+app = tk.Tk()
+app.title("Display Even or Odd Numbers")
 
-label = tk.Label(root, text="Enter a whole number:")
-label.grid(row=0, column=0, padx=10, pady=10)
+tk.Label(app, text="Enter a number from 1-20:").pack()
+entry = tk.Entry(app)
+entry.pack()
 
-entry = tk.Entry(root)
-entry.grid(row=0, column=1, padx=10, pady=10)
+tk.Label(app, text="Select 1-ODD or 0-EVEN:").pack()
+choice_var = tk.StringVar()
+choice_entry = tk.Entry(app, textvariable=choice_var)
+choice_entry.pack()
 
-button = tk.Button(root, text="Compute", command=display_input)
-button.grid(row=1, column=1, padx=10, pady=10)
+tk.Button(app, text="Display", command=display_numbers).pack()
 
-clear_button = tk.Button(root, text="Clear", command=clear) 
-clear_button.grid(row=1, column=2, padx=10, pady=10)
+result_label = tk.Label(app, text="Output: ")
+result_label.pack()
 
-root.mainloop()
+app.mainloop()
